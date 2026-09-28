@@ -1,0 +1,6 @@
+# Só para gerar o retrato (rode localmente quando trocar a foto).
+# O gráfico diário usa apenas a biblioteca padrão do Python e não precisa disto.
+pillow
+numpy
+opencv-python-headless
+rembg[cpu]
