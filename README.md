@@ -32,6 +32,7 @@
 | --- | --- | --- |
 | [**App Remédios**](https://github.com/GSerejo/App-remedios) · [vídeo](https://www.youtube.com/watch?v=M813-sd0z9c) | Lembrete de medicação para idosos e crianças: alarme no horário de cada remédio e, ao tomar, o cuidador recebe pelo WhatsApp a foto da cartela, o remédio, o dia e o horário | React Native · Expo · TypeScript |
 | [**clone-tabnews**](https://github.com/GSerejo/clone-tabnews) · [site](https://gserejo.com.br) | Clone do TabNews em construção no Curso.dev: API em Next.js, PostgreSQL no Docker e testes de integração | Next.js · PostgreSQL · Docker · Jest |
+| [**Curriculo**](https://github.com/GSerejo/Curriculo) · [site](https://gserejo.github.io/Curriculo/) | Portfólio e currículo bilíngues: site com troca de idioma, currículos em PDF para recrutadores e sistemas ATS, publicado no GitHub Pages | HTML · CSS · JavaScript |
 | **Em breve** 🚧 | Novo projeto em construção | — |
 
 <br>

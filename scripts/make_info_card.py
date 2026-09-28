@@ -19,7 +19,7 @@ INFO = [
     ("Front", "React · Next.js · React Native"),
     ("Back/Dados", "Node.js · PostgreSQL · Docker"),
     ("Testes", "Jest"),
-    ("Projetos", "App Remédios · clone-tabnews"),
+    ("Projetos", "App Remédios · clone-tabnews · Portfólio"),
     ("Em breve", "novo projeto em construção"),
     ("Local", "Brasília, DF"),
     ("Idiomas", "Português · Inglês (B1)"),
