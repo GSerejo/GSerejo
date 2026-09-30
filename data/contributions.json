@@ -1,12 +1,12 @@
 {
   "user": "GSerejo",
-  "fetched_at": "2026-09-29T12:58:47+00:00",
-  "total": 80,
+  "fetched_at": "2026-09-30T12:40:43+00:00",
+  "total": 89,
   "current_streak": 2,
   "longest_streak": 2,
   "best_day": {
-    "date": "2026-03-23",
-    "count": 12
+    "date": "2026-09-29",
+    "count": 13
   },
   "days": [
     {
@@ -1841,8 +1841,13 @@
     },
     {
       "date": "2026-09-29",
-      "level": 2,
-      "count": 4
+      "level": 4,
+      "count": 13
+    },
+    {
+      "date": "2026-09-30",
+      "level": 0,
+      "count": 0
     }
   ]
 }
