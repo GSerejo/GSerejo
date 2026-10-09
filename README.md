@@ -42,7 +42,7 @@
 <p><b>Estagiário de Desenvolvimento Full Stack · TypeScript · Python · Rust</b></p>
 
 [![Portfólio](https://img.shields.io/badge/Portfólio-gserejo.github.io-0f172a?style=for-the-badge&logo=githubpages&logoColor=38bdf8)](https://gserejo.github.io/Curriculo/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Gabriel_Serejo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-serejo-118279162/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Gabriel_Serejo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabrielserejodev/)
 [![E-mail](https://img.shields.io/badge/E--mail-gabrielserejo21@gmail.com-22c55e?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabrielserejo21@gmail.com)
 [![Currículo](https://img.shields.io/badge/Currículo-PDF-38bdf8?style=for-the-badge&logo=readthedocs&logoColor=0f172a)](https://gserejo.github.io/Curriculo/curriculo.pdf)
 
