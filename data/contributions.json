@@ -1,6 +1,6 @@
 {
   "user": "GSerejo",
-  "fetched_at": "2026-10-20T11:44:40+00:00",
+  "fetched_at": "2026-10-21T11:56:28+00:00",
   "total": 104,
   "current_streak": 1,
   "longest_streak": 4,
@@ -1843,6 +1843,11 @@
       "date": "2026-10-20",
       "level": 1,
       "count": 1
+    },
+    {
+      "date": "2026-10-21",
+      "level": 0,
+      "count": 0
     }
   ]
 }
