@@ -1,4 +1,4 @@
-name: Atualiza gráfico de contribuições
+name: Atualiza a oficina (commits e recibo)
 
 "on":
   schedule:
@@ -8,14 +8,16 @@ name: Atualiza gráfico de contribuições
     branches: [main]
     paths:
       - scripts/fetch_contributions.py
-      - scripts/render_heatmap_svg.py
+      - scripts/oficina.py
+      - scripts/render_printer_svg.py
+      - scripts/render_receipt_svg.py
       - .github/workflows/update-profile-art.yml
 
 permissions:
   contents: write
 
 jobs:
-  heatmap:
+  oficina:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,14 +26,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Os dois scripts só usam a biblioteca padrão: nada para instalar
+      # Os três scripts só usam a biblioteca padrão: nada para instalar
       - run: python scripts/fetch_contributions.py
-      - run: python scripts/render_heatmap_svg.py
+      - run: python scripts/render_printer_svg.py
+      - run: python scripts/render_receipt_svg.py
 
-      - name: Commit do gráfico novo
+      - name: Commit das máquinas atualizadas
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/contributions.json contrib-heatmap.svg
-          git diff --cached --quiet || git commit -m "chore: atualiza gráfico de contribuições [skip ci]"
+          git add data/contributions.json impressora-3d.svg recibo.svg
+          git diff --cached --quiet || git commit -m "chore: atualiza a oficina [skip ci]"
           git push

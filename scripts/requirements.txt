@@ -1,6 +1,5 @@
-# Só para gerar o retrato (rode localmente quando trocar a foto).
-# O gráfico diário usa apenas a biblioteca padrão do Python e não precisa disto.
+# Só para gerar o plotter (rode localmente quando trocar a foto de perfil ou o texto).
+# O recibo e a impressora 3D usam apenas a biblioteca padrão do Python e não precisam disto.
 pillow
 numpy
 opencv-python-headless
-rembg[cpu]

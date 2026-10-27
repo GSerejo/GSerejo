@@ -1,51 +1,29 @@
 <div align="center">
 
-<!-- retrato em ASCII (se digita linha a linha) ao lado de um cartão estilo neofetch.
-     as larguras 370 + 490 = 860 batem com a largura do gráfico de contribuições.
-     retrato:  python scripts/prep_photo.py source-photo.jpg && python scripts/make_ascii_svg.py
-     cartão:   edite INFO em scripts/make_info_card.py e rode python scripts/make_info_card.py -->
+<!-- a oficina do gabriel: três máquinas que montam o perfil ao vivo, em loop (SVG + SMIL, sem JavaScript).
+     plotter:    python scripts/prep_avatar.py && python scripts/make_plotter_svg.py   (foto de perfil do GitHub e texto)
+     recibo:     python scripts/render_receipt_svg.py (projetos; edite PROJECTS)
+     impressora: python scripts/render_printer_svg.py (commits; atualizado todo dia pela Action) -->
 
-<h3><code>gabriel@github ~ $ whoami</code></h3>
+<img src="./plotter.svg" width="860" alt="Um plotter desenha com caneta o retrato de Gabriel Serejo e escreve: Dev Full Stack Júnior na CDS Solutions, Brasília, DF. Ao lado: TypeScript, Python, Rust e Java; React, Next.js e React Native; Node.js, PostgreSQL e Docker." />
 
-<table>
-<tr>
-<td valign="top"><img src="./ascii-portrait.svg" width="370" alt="Retrato em ASCII de Gabriel Serejo" /></td>
-<td valign="top"><img src="./info-card.svg" width="490" alt="Gabriel Serejo: Desenvolvedor Full Stack Júnior na CDS Solutions, estudante de Ciência da Computação no IESB. Stack: TypeScript, Python, Rust, Java, React, Next.js, React Native, Node.js, PostgreSQL e Docker." /></td>
-</tr>
-</table>
+<img src="./recibo.svg" width="860" alt="Uma impressora térmica imprime um cupom com os projetos App Remédios, clone-tabnews, Curriculo e 365prints." />
+
+[**App Remédios**](https://github.com/GSerejo/App-remedios) · [vídeo](https://www.youtube.com/watch?v=M813-sd0z9c) &nbsp;|&nbsp;
+[**clone-tabnews**](https://github.com/GSerejo/clone-tabnews) · [site](https://gserejo.com.br) &nbsp;|&nbsp;
+[**Curriculo**](https://github.com/GSerejo/Curriculo) · [site](https://gserejo.github.io/Curriculo/) &nbsp;|&nbsp;
+[**365prints**](https://github.com/GSerejo/365prints) · [site](https://365prints.vercel.app)
 
 <br>
 
-<!-- gráfico de contribuições com dados reais, atualizado todo dia por
-     .github/workflows/update-profile-art.yml -->
-
-<h3><code>gabriel@github ~ $ ./contributions.sh</code></h3>
-
-<img src="./contrib-heatmap.svg" width="860" alt="Gráfico de contribuições de Gabriel Serejo no GitHub, atualizado todo dia" />
+<img src="./impressora-3d.svg" width="860" alt="Uma impressora 3D imprime o gráfico de contribuições de Gabriel Serejo no GitHub, atualizado todo dia." />
 
 <br>
 <br>
 
-<h3><code>gabriel@github ~ $ ls ~/projects</code></h3>
-
-| Projeto | O que é | Stack |
-| --- | --- | --- |
-| [**App Remédios**](https://github.com/GSerejo/App-remedios) · [vídeo](https://www.youtube.com/watch?v=M813-sd0z9c) | Lembrete de medicação para idosos e crianças: alarme no horário de cada remédio e, ao tomar, o cuidador recebe pelo WhatsApp a foto da cartela, o remédio, o dia e o horário | React Native · Expo · TypeScript |
-| [**clone-tabnews**](https://github.com/GSerejo/clone-tabnews) · [site](https://gserejo.com.br) | Clone do TabNews em construção no Curso.dev: API em Next.js, PostgreSQL no Docker e testes de integração | Next.js · PostgreSQL · Docker · Jest |
-| [**Curriculo**](https://github.com/GSerejo/Curriculo) · [site](https://gserejo.github.io/Curriculo/) | Portfólio e currículo bilíngues: site com troca de idioma, currículos em PDF para recrutadores e sistemas ATS, publicado no GitHub Pages | HTML · CSS · JavaScript |
-| [**365prints**](https://github.com/GSerejo/365prints) · [site](https://365prints.vercel.app) | Busca nos vídeos do quadro "365 dias de impressão 3D" do @unipedia3d pelo que é falado em cada um: transcrição local com Whisper, coleta do TikTok e do Instagram e painel de métricas | Next.js · TypeScript · Python · Whisper · PostHog |
-
-<br>
-
-<h3><code>gabriel@github ~ $ ./links.sh</code></h3>
-
-<p><b>Desenvolvedor Full Stack Júnior · TypeScript · Python · Rust</b></p>
-
-[![Portfólio](https://img.shields.io/badge/Portfólio-gserejo.github.io-0f172a?style=for-the-badge&logo=githubpages&logoColor=38bdf8)](https://gserejo.github.io/Curriculo/)
+[![Portfólio](https://img.shields.io/badge/Portfólio-gserejo.github.io-0d1017?style=for-the-badge&logo=githubpages&logoColor=ff7a45)](https://gserejo.github.io/Curriculo/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Gabriel_Serejo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabrielserejodev/)
-[![E-mail](https://img.shields.io/badge/E--mail-gabrielserejo21@gmail.com-22c55e?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabrielserejo21@gmail.com)
-[![Currículo](https://img.shields.io/badge/Currículo-PDF-38bdf8?style=for-the-badge&logo=readthedocs&logoColor=0f172a)](https://gserejo.github.io/Curriculo/curriculo.pdf)
-
-<br>
+[![E-mail](https://img.shields.io/badge/E--mail-gabrielserejo21@gmail.com-4fd1c5?style=for-the-badge&logo=gmail&logoColor=0d1017)](mailto:gabrielserejo21@gmail.com)
+[![Currículo](https://img.shields.io/badge/Currículo-PDF-ff7a45?style=for-the-badge&logo=readthedocs&logoColor=0d1017)](https://gserejo.github.io/Curriculo/curriculo.pdf)
 
 </div>
