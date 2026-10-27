@@ -67,6 +67,14 @@ def streaks(days: list[dict]) -> tuple[int, int]:
     return current, longest
 
 
+def monthly_totals(days: list[dict]) -> list[dict]:
+    totals = {}
+    for day in days:
+        month = day["date"][:7]
+        totals[month] = totals.get(month, 0) + day["count"]
+    return [{"month": month, "total": total} for month, total in totals.items()]
+
+
 def main() -> None:
     days = parse_days(fetch_html())
     current, longest = streaks(days)
@@ -79,6 +87,7 @@ def main() -> None:
         "current_streak": current,
         "longest_streak": longest,
         "best_day": {"date": best["date"], "count": best["count"]},
+        "months": monthly_totals(days),
         "days": days,
     }
     OUTPUT.parent.mkdir(exist_ok=True)

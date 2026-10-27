@@ -2,8 +2,10 @@
 
 Roda só quando a foto muda, depois do prep_photo.py:
     python scripts/make_ascii_svg.py
+    STATIC=1 python scripts/make_ascii_svg.py   # quadro final, sem animação, para pré-visualizar
 """
 
+import os
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -24,6 +26,7 @@ MIN_GLYPH = 1  # a silhueta nunca some: pixel da pessoa vira no mínimo "."
 GAMMA = 1.15  # > 1 clareia um pouco os tons médios, deixando as sombras de verdade densas
 
 BG, PANEL_BORDER, INK, CURSOR, MUTED = "#0f172a", "#334155", "#cbd5e1", "#22c55e", "#94a3b8"
+STATIC = os.environ.get("STATIC") == "1"
 FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
 
 PAD = 20
@@ -62,6 +65,12 @@ def main() -> None:
         if not line.strip():
             continue
         y = top + i * LINE_H
+        if STATIC:
+            rows.append(
+                f'<text x="{PAD}" y="{y + LINE_H * 0.8:.1f}" textLength="{art_w:.1f}" '
+                f'lengthAdjust="spacingAndGlyphs" xml:space="preserve">{escape(line)}</text>'
+            )
+            continue
         begin = f"{i * ROW_DELAY:.3f}s"
         # Cada linha é revelada por um recorte que cresce da esquerda para a direita
         defs.append(

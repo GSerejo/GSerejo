@@ -10,7 +10,7 @@
 <table>
 <tr>
 <td valign="top"><img src="./ascii-portrait.svg" width="370" alt="Retrato em ASCII de Gabriel Serejo" /></td>
-<td valign="top"><img src="./info-card.svg" width="490" alt="Gabriel Serejo: Estagiário de Desenvolvimento Full Stack na CDS Solutions, estudante de Ciência da Computação no IESB. Stack: TypeScript, Python, Rust, Java, React, Next.js, React Native, Node.js, PostgreSQL e Docker." /></td>
+<td valign="top"><img src="./info-card.svg" width="490" alt="Gabriel Serejo: Desenvolvedor Full Stack Júnior na CDS Solutions, estudante de Ciência da Computação no IESB. Stack: TypeScript, Python, Rust, Java, React, Next.js, React Native, Node.js, PostgreSQL e Docker." /></td>
 </tr>
 </table>
 
@@ -39,7 +39,7 @@
 
 <h3><code>gabriel@github ~ $ ./links.sh</code></h3>
 
-<p><b>Estagiário de Desenvolvimento Full Stack · TypeScript · Python · Rust</b></p>
+<p><b>Desenvolvedor Full Stack Júnior · TypeScript · Python · Rust</b></p>
 
 [![Portfólio](https://img.shields.io/badge/Portfólio-gserejo.github.io-0f172a?style=for-the-badge&logo=githubpages&logoColor=38bdf8)](https://gserejo.github.io/Curriculo/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Gabriel_Serejo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabrielserejodev/)

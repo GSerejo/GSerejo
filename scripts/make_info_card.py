@@ -2,8 +2,10 @@
 
 Edite INFO quando algo mudar (cargo, stack, projetos) e rode de novo:
     python scripts/make_info_card.py
+    STATIC=1 python scripts/make_info_card.py   # quadro final, sem animação, para pré-visualizar
 """
 
+import os
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -12,7 +14,7 @@ OUTPUT = ROOT / "info-card.svg"
 
 USER, HOST = "gabriel", "github"
 INFO = [
-    ("Cargo", "Estagiário Dev Full Stack @ CDS Solutions"),
+    ("Cargo", "Desenvolvedor Júnior @ CDS Solutions"),
     ("Antes", "Estagiário de TI @ CFN · IESB"),
     ("Formação", "Ciência da Computação @ IESB"),
     ("Linguagens", "TypeScript · Python · Rust · Java"),
@@ -33,6 +35,7 @@ PORTRAIT_DISPLAY_W, CARD_W = 370, 490
 BG, PANEL_BORDER, TEXT, MUTED = "#0f172a", "#334155", "#e2e8f0", "#94a3b8"
 PRIMARY, SECONDARY, ACCENT = "#38bdf8", "#818cf8", "#22c55e"
 PALETTE = ["#ef4444", "#eab308", "#22c55e", "#38bdf8", "#818cf8", "#c084fc", "#f472b6", "#e2e8f0"]
+STATIC = os.environ.get("STATIC") == "1"
 FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
 
 PAD = 24
@@ -86,6 +89,7 @@ def main() -> None:
   .l {{ opacity: 0; animation: in .45s ease-out forwards; }}
   @keyframes in {{ from {{ opacity: 0; transform: translateX(-8px); }} to {{ opacity: 1; transform: none; }} }}
   @media (prefers-reduced-motion: reduce) {{ .l {{ animation: none; opacity: 1; }} }}
+  {".l { animation: none; opacity: 1; }" if STATIC else ""}
 </style>
 <rect x=".5" y=".5" width="{CARD_W - 1}" height="{height - 1}" rx="12" fill="{BG}" stroke="{PANEL_BORDER}"/>
 <path d="M.5 {HEADER_H}H{CARD_W - .5}" stroke="{PANEL_BORDER}"/>

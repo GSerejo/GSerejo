@@ -3,9 +3,11 @@
 As células aparecem na diagonal, uma vez só, e param. Tudo fica dentro do SVG
 (o GitHub bloqueia JavaScript e CSS externo no README, mas roda animação de SVG).
     python scripts/render_heatmap_svg.py
+    STATIC=1 python scripts/render_heatmap_svg.py   # quadro final, sem animação, para pré-visualizar
 """
 
 import json
+import os
 from datetime import date
 from pathlib import Path
 
@@ -16,6 +18,7 @@ OUTPUT = ROOT / "contrib-heatmap.svg"
 # Mesma paleta do portfólio: vazio -> ciano mais forte
 PALETTE = ["#1e293b", "#0c4a6e", "#0369a1", "#0ea5e9", "#7dd3fc"]
 BG, PANEL_BORDER, TEXT, MUTED, PRIMARY = "#0f172a", "#334155", "#e2e8f0", "#94a3b8", "#38bdf8"
+STATIC = os.environ.get("STATIC") == "1"
 FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
 
 MONTHS = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
@@ -38,6 +41,7 @@ def br_date(iso: str) -> str:
 def main() -> None:
     data = json.loads(DATA.read_text(encoding="utf-8"))
     days = data["days"]
+    month_totals = {m["month"]: m["total"] for m in data.get("months", [])}
 
     first = date.fromisoformat(days[0]["date"])
     first_sunday = first.toordinal() - (first.weekday() + 1) % 7
@@ -63,16 +67,19 @@ def main() -> None:
             f'fill="{PALETTE[day["level"]]}" style="animation-delay:{delay:.3f}s"><title>{label}</title></rect>'
         )
         if row == 0 and d.month != last_month:
-            month_starts.append((col, d.month))
+            month_starts.append((col, d))
             last_month = d.month
 
     # Rótulo do mês na primeira semana dele; pula quando o próximo começa perto demais
     # (acontece com o mês parcial na primeira ou na última coluna)
     month_labels = []
-    for i, (col, month) in enumerate(month_starts):
+    for i, (col, d) in enumerate(month_starts):
         next_col = month_starts[i + 1][0] if i + 1 < len(month_starts) else weeks
         if next_col - col >= 3:
-            month_labels.append(f'<text x="{grid_x + col * STEP}" y="{grid_y - 8}">{MONTHS[month - 1]}</text>')
+            name = MONTHS[d.month - 1]
+            total = month_totals.get(f"{d.year}-{d.month:02d}")
+            tooltip = f"<title>{name}/{d.year}: {total} contribuição(ões)</title>" if total is not None else ""
+            month_labels.append(f'<text x="{grid_x + col * STEP}" y="{grid_y - 8}">{name}{tooltip}</text>')
 
     weekday_labels = [
         f'<text x="{PAD}" y="{grid_y + row * STEP + CELL - 2}">{text}</text>'
@@ -102,6 +109,7 @@ def main() -> None:
   .c {{ opacity: 0; transform-box: fill-box; transform-origin: center; animation: pop .45s ease-out forwards; }}
   @keyframes pop {{ from {{ opacity: 0; transform: translateY(-6px) scale(.6); }} to {{ opacity: 1; transform: none; }} }}
   @media (prefers-reduced-motion: reduce) {{ .c {{ animation: none; opacity: 1; }} }}
+  {".c { animation: none; opacity: 1; }" if STATIC else ""}
 </style>
 <rect x=".5" y=".5" width="{width - 1}" height="{height - 1}" rx="12" fill="{BG}" stroke="{PANEL_BORDER}"/>
 <path d="M.5 {HEADER_H}H{width - .5}" stroke="{PANEL_BORDER}"/>
