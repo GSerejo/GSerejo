@@ -7,8 +7,9 @@
 
 <img src="./plotter.svg" width="860" alt="Um plotter desenha com caneta o retrato de Gabriel Serejo e escreve: Dev Full Stack Júnior na CDS Solutions, Brasília, DF. Ao lado: TypeScript, Python, Rust e Java; React, Next.js e React Native; Node.js, PostgreSQL e Docker." />
 
-<img src="./recibo.svg" width="860" alt="Uma impressora térmica imprime um cupom com os projetos App Remédios, clone-tabnews, Curriculo e 365prints." />
+<img src="./recibo.svg" width="860" alt="Uma impressora térmica imprime um cupom com os projetos WinGlass, App Remédios, clone-tabnews, Curriculo e 365prints." />
 
+[**WinGlass**](https://winglass.com.br) · [Microsoft Store](https://apps.microsoft.com/detail/9NJP11JXN4S9) &nbsp;|&nbsp;
 [**App Remédios**](https://github.com/GSerejo/App-remedios) · [vídeo](https://www.youtube.com/watch?v=M813-sd0z9c) &nbsp;|&nbsp;
 [**clone-tabnews**](https://github.com/GSerejo/clone-tabnews) · [site](https://gserejo.com.br) &nbsp;|&nbsp;
 [**Curriculo**](https://github.com/GSerejo/Curriculo) · [site](https://gserejo.github.io/Curriculo/) &nbsp;|&nbsp;

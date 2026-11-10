@@ -16,6 +16,7 @@ DATA = ROOT / "data" / "contributions.json"
 OUTPUT = ROOT / "recibo.svg"
 
 PROJECTS = [
+    ("WinGlass", ["vidro líquido no windows 11:", "barra, menu iniciar e menus"], "c# · winui 3 · c++ · na store"),
     ("App Remédios", ["alarme na hora de cada remédio", "e foto da cartela p/ o cuidador"], "react native · expo · ts"),
     ("clone-tabnews", ["api em next.js, postgres no", "docker e testes de integração"], "next.js · postgres · jest"),
     ("Curriculo", ["portfólio e currículo bilíngues", "com pdf pronto para ats"], "html · css · js"),
