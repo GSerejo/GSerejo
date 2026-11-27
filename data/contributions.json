@@ -1,12 +1,12 @@
 {
   "user": "GSerejo",
-  "fetched_at": "2026-11-26T16:58:37+00:00",
-  "total": 258,
-  "current_streak": 5,
-  "longest_streak": 5,
+  "fetched_at": "2026-11-27T16:44:46+00:00",
+  "total": 287,
+  "current_streak": 6,
+  "longest_streak": 6,
   "best_day": {
-    "date": "2026-11-25",
-    "count": 29
+    "date": "2026-11-26",
+    "count": 30
   },
   "months": [
     {
@@ -59,7 +59,7 @@
     },
     {
       "month": "2026-11",
-      "total": 134
+      "total": 163
     }
   ],
   "days": [
@@ -1905,8 +1905,13 @@
     },
     {
       "date": "2026-11-26",
+      "level": 4,
+      "count": 30
+    },
+    {
+      "date": "2026-11-27",
       "level": 3,
-      "count": 21
+      "count": 20
     }
   ]
 }
